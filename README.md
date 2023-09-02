@@ -24,7 +24,7 @@ A simple script to automatically claim rewards from the popular gambling website
 }
 ```
 
-Done! Feel free to `cargo run` and see the script go.
+Done! Feel free to `cargo run` and watch the script go.
 
 Below are optional steps for the following:
 - [Running it within a docker container](#docker-instructions)
