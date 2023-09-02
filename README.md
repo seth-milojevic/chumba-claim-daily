@@ -40,11 +40,11 @@ Below are optional steps for the following:
 
 `docker build -t chumba-claim-daily .`
 
-3. Run the docker image we just created
+3. Run the docker image
 
 `docker run --rm chumba-claim-daily:latest`
 
-Voila! Docker will create and run a container with our claim-daily running inside.
+Voila! Docker will create and run a container with the script running inside.
 
 ## Cron Instructions
 
@@ -52,8 +52,8 @@ There will be two sets of cron instructions:
 - [Cron job running the script directly on the host machine](#host-machine)
 - [Cron job runnint the script within a docker container](#docker)
 
-[!NOTE]
-Both methods will utilize the crontab of the host machine. The only difference is where the claim-daily script is executed.
+> [!NOTE]
+> Both methods will utilize the crontab of the host machine. The only difference is where the chumba-claim-daily script is executed.
 
 ### Host Machine
 
@@ -61,7 +61,7 @@ Both methods will utilize the crontab of the host machine. The only difference i
 
 `crontab -e`
 
-2. Add the following to your crontab to execute the script every day at 5am
+2. Add the following to crontab to execute the script every day at 5am
 
 `0 5 * * * cd /path/to/cloned/repository && cargo run --release`
 
@@ -79,10 +79,10 @@ I have personally had issues with running docker commands from within crontab, s
 
 `crontab -e`
 
-3. Add the following to your crontab to execute the script every day at 5am
+3. Add the following to crontab to execute the script every day at 5am
 
 `0 5 * * * /bin/sh /path/to/shell/script/docker-run.sh`
 
-4. Save your changes and exit crontab
+4. Save changes and exit crontab
 
 Done! Every day at 5am, the container will be created and run the script.
