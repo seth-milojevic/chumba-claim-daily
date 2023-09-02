@@ -1,4 +1,4 @@
-# claim-daily: Chumba Casino daily reward claimer
+# chumba-claim-daily: Chumba Casino daily reward claimer
 
 A simple script to automatically claim rewards from the popular gambling website Chumba Casino.
 
